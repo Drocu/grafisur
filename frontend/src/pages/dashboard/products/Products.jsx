@@ -20,7 +20,7 @@ export const Products = () => {
     productDescription: "",
     productPrice: 0.0,
     productImage: "",
-    productCategory: 0,
+    productCategory: "",
   });
   const [bandera, setBandera] = useState(false);
 
@@ -66,15 +66,24 @@ export const Products = () => {
     }
   };
 
-  const handleInputChange = (event) => {
-    const { name, value } = event.target;
-    if (name === "productPrice") {
-      return setProduct({ ...product, [name]: parseFloat(value) });
-    } else if (name === "productCategory") {
-      return setProduct({ ...product, [name]: parseInt(value) });
-    } else {
-      return setProduct({ ...product, [name]: value });
+  const selectCategory = (idCategory) => {
+    let findCategory = listOfCategories.find((category) =>{
+      return category.id === idCategory
+    });
+    if (findCategory !== undefined) {
+      return findCategory.name;
     }
+  };
+
+  const handleInputChange = (event) => {
+      const { name, value } = event.target;
+      if (name === "productPrice") {
+        return setProduct({ ...product, [name]: parseFloat(value) });
+      } else if (name === "productCategory") {
+        return setProduct({ ...product, [name]: parseInt(value) });
+      } else {
+        return setProduct({ ...product, [name]: value });
+      }
   };
 
   const handleFileChange = async (event) => {
@@ -120,7 +129,7 @@ export const Products = () => {
                       loading={"lazy"}
                     />
                   </td>
-                  <td>{product.productCategory}</td>
+                  <td>{selectCategory(product.productCategory)}</td>
                 </tr>
               ))}
           </tbody>
@@ -180,7 +189,7 @@ export const Products = () => {
           >
             <option value="">Elegir Categoria</option>
             {listOfCategories.map((category, index) => (
-              <option key={index} value={index}>
+              <option key={category.id} value={category.id}>
                 {category.name}
               </option>
             ))}

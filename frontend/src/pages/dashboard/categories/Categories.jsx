@@ -59,7 +59,7 @@ export const Categories = () => {
         throw new Error(response.message);
       }
     } catch (error) {
-      console.log(error.message);
+      console.log(error);
     }
   };
 

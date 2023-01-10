@@ -19,7 +19,7 @@ userController.create = async (req,res)=>{
         })               
     } catch (error) {
         res.status(502).json({
-            success:true,
+            success:false,
             message:'error al registrar un nuevo producto',
             content:error
         })

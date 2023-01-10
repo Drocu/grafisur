@@ -34,6 +34,7 @@ export const PublicRegister = ({ showRegister, handleCloseRegister, handleChange
         })
         try {
             const response = await SignUp(newUser)
+            console.log(response, registerState);
             if (response.success) {
                 return setRegisterState({
                     ...registerState,
@@ -48,7 +49,7 @@ export const PublicRegister = ({ showRegister, handleCloseRegister, handleChange
                 isLoading: false,
             })
         } catch (error) {
-            console.log(error)
+            console.log(error,"Error captura")
             return setRegisterState({
                 ...registerState,
                 isError: true,

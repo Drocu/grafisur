@@ -72,11 +72,14 @@ export const AdminSidebar = () => {
                     </Collapse>
                 </li>
                 <li className='Sidebar-nav-menu'>
-                    <div className='Sidebar-nav-link'>
-                        <BsHouseDoor alt="http://127.0.0.1:5173/pe"/>
-                        <span  >HOME</span>
-                    </div>
+
                 </li>
+                <li className='Sidebar-nav-menu' onClick={() => navigate('/pe')}>
+                <div className='Sidebar-nav-link'>
+                        <BsHouseDoor alt="http://127.0.0.1:5173/pe"/>
+                        Home
+                    </div>
+                </li>   
             </ul>
         </div >
     )

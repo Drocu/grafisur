@@ -24,10 +24,10 @@ export const Home = () => {
           <div className="NewHero-container">
             <div className="NewHero-content">
               <p className="NewHero-text">
-                Absolutely hot collections <span>🔥</span>
+                LOS MEJORES PRECIOS <span>🔥</span>
               </p>
               <h1 className="NewHero-title">
-                The Best Place To Find And Buy Amazing <span>Products</span>
+                El mejor lugar para comprar los mejores  <span>LIBROS</span>
               </h1>
               <p className="NewHero-text">
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit.

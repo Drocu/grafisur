@@ -30,4 +30,15 @@ categoryController.create = async (req,res)=>{
     }
 }
 
+categoryController.deleteOne = async (req,res) =>{
+    try {
+        const categories = await categoryModel.deleteOne({id: req.params.id});
+        res.status(200).json(categories);
+    } catch (error) {
+        res.status(500).json({
+            message: error.message,
+        });
+    }
+}
+
 module.exports = categoryController;

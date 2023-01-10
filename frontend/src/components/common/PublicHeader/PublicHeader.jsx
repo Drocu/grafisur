@@ -49,7 +49,7 @@ export const PublicHeader = () => {
                                     to={"/pe/buscar/novedades"}
                                     className={(estatus) => estatus.isActive ? 'Header-nav-item active' : 'Header-nav-item'}
                                 >
-                                    Novedades
+                                    Productos
                                 </NavLink>
                             </li>
                             <li>
@@ -58,7 +58,7 @@ export const PublicHeader = () => {
                                     to={"/admin-panel/products"}
                                     className={(estatus) => estatus.isActive ? 'Header-nav-item active' : 'Header-nav-item'}
                                 >
-                                    Destacados
+                                    Crear Productos
                                 </NavLink>
                             </li>
                         </ul>
